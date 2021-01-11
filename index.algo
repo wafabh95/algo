@@ -1,0 +1,44 @@
+ALGORITHM sentence
+VAR
+    sentence : string;
+    length : INTEGER;
+    words : INTEGER;
+    vowels : INTEGER;
+    n : INTEGER;
+
+BEGIN
+    Read(sentence)
+
+    n:= sentence.length
+
+    
+        IF sentence[n-1] <> '.'
+            write("This is not a sentence try again")
+            read(sentence)
+        END_IF
+    
+
+
+    length := 0;
+    FOR i from 1 to n STEP 1 Do
+        length:= length + 1;
+         write("length of sentence: ", length);
+    END_FOR
+
+
+    words := 0;
+    FOR i from 1 to n STEP 1 Do
+       if sentence[i] = ''
+           words := words + 1;
+           write("words est egal a: ", words);
+       END_IF
+    END_FOR
+
+    vowels := 0;
+    for i from 1 to n STEP 1 Do
+      if[sentence[i] = 'a' or sentence[i] = 'e' or sentence[i] = 'i' or sentence[i] = 'o' or sentence[i] = 'u' or sentence[i] = 'v']
+        vowels := vowels + 1;
+        write("vowels est egal a :", vowels);
+      END_IF
+    END_FOR
+END
